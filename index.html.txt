@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Healthy Living Education Alliance</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f5f9fc;
+color:#1c2b36;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+header{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#1c2b36;
+font-weight:600;
+}
+
+.hero{
+background:linear-gradient(120deg,#1f6fb2,#2ca56d);
+color:white;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:650px;
+font-size:18px;
+}
+
+.button{
+display:inline-block;
+padding:12px 22px;
+margin:15px 10px 0 0;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.primary{
+background:#f39c2b;
+color:white;
+}
+
+.secondary{
+background:white;
+color:#1f6fb2;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.blue{border-top:6px solid #1f6fb2}
+.orange{border-top:6px solid #f39c2b}
+.green{border-top:6px solid #2ca56d}
+.yellow{border-top:6px solid #f4c542}
+
+footer{
+background:#1c2b36;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+button.lang{
+background:#f4c542;
+border:none;
+padding:8px 12px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<strong>HLEA</strong>
+
+<div>
+<a href="#mission">Mission</a>
+<a href="#programs">Programs</a>
+<a href="#values">Values</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+<button class="lang">Español</button>
+</div>
+
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Empowering Patients. Training Professionals. Optimizing Life.</h1>
+
+<p>
+Welcome to the Healthy Living Education Alliance (HLEA).  
+At HLEA, we believe managing obesity and metabolic health requires more than advice—it requires a movement.
+</p>
+
+<p>
+We are a nonprofit dedicated to bridging the gap between clinical science and everyday life.
+Whether you are a patient seeking sustainable health tools or a healthcare provider pursuing advanced training in cardiovascular prevention and longevity, you’ve found your alliance.
+</p>
+
+<a class="button primary" href="#programs">Explore Our Programs</a>
+<a class="button secondary" href="#providers">For Healthcare Providers</a>
+
+</div>
+
+</section>
+
+<section class="section" id="mission">
+
+<div class="container">
+
+<h2>Our Purpose</h2>
+
+<p>
+The Healthy Living Education Alliance was founded to address the global challenge of metabolic disease.
+Obesity is a complex condition that requires a dual approach: patient-centered education and specialized professional development.
+</p>
+
+<p>
+Our mission is to translate cutting-edge clinical science into practical tools that empower individuals, healthcare providers, and communities to achieve sustainable health.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2>Our Strategic Pillars</h2>
+
+<div class="grid">
+
+<div class="card blue">
+<h3>For Patients</h3>
+<p>
+We provide evidence-based education that removes stigma and replaces it with practical knowledge about nutrition, metabolic health, and sustainable lifestyle changes.
+</p>
+</div>
+
+<div class="card green" id="providers">
+<h3>For Professionals</h3>
+<p>
+We train healthcare providers in obesity management, cardiovascular prevention, and longevity science to improve patient outcomes and quality of care.
+</p>
+</div>
+
+<div class="card orange">
+<h3>For the Future</h3>
+<p>
+Through collaboration and education, we aim to expand prevention, improve healthcare delivery, and extend healthy lifespans.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="values">
+
+<div class="container">
+
+<h2>HLEA Core Values</h2>
+
+<div class="grid">
+
+<div class="card blue">
+<h3>Evidence-Based Integrity</h3>
+<p>
+Health education must be grounded in rigorous science and the latest clinical research.
+</p>
+</div>
+
+<div class="card orange">
+<h3>Radical Compassion</h3>
+<p>
+Obesity is a complex medical condition, not a character flaw. We remove stigma and foster empathy.
+</p>
+</div>
+
+<div class="card green">
+<h3>Proactive Longevity</h3>
+<p>
+Our focus is long-term health-span, preventing disease and optimizing vitality.
+</p>
+</div>
+
+<div class="card yellow">
+<h3>Educational Accessibility</h3>
+<p>
+We translate high-level medical insights into accessible knowledge for everyone.
+</p>
+</div>
+
+<div class="card green">
+<h3>Community-Centered Equity</h3>
+<p>
+We focus on underserved communities, particularly Hispanic and Spanish-speaking populations, ensuring equitable access to metabolic health education.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="programs">
+
+<div class="container">
+
+<h2>Our Programs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Community Health Workshops</h3>
+<p>Education on nutrition, exercise, and metabolic health.</p>
+</div>
+
+<div class="card">
+<h3>Chronic Disease Education</h3>
+<p>Programs supporting individuals managing diabetes and cardiovascular disease.</p>
+</div>
+
+<div class="card">
+<h3>Youth Wellness</h3>
+<p>Early lifestyle education for younger populations.</p>
+</div>
+
+<div class="card">
+<h3>Senior Health</h3>
+<p>Programs supporting independence and healthy aging.</p>
+</div>
+
+<div class="card">
+<h3>Workplace Wellness</h3>
+<p>Helping organizations improve employee health and productivity.</p>
+</div>
+
+<div class="card">
+<h3>Community Outreach</h3>
+<p>Health fairs and public education events.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="team">
+
+<div class="container">
+
+<h2>Our Leadership</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Dr. Al William Robaina</h3>
+<p>Founder, President, Head MD</p>
+</div>
+
+<div class="card">
+<h3>Chris Robaina</h3>
+<p>VP and Head of Non-Clinical Staff</p>
+<p>NBHWC Accredited Health Coach</p>
+<p>National Diabetes Prevention Program Certified</p>
+</div>
+
+<div class="card">
+<h3>Sophia Idriss</h3>
+<p>Head of Community Outreach and Social Media</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<p>Email: contact@healthylivingalliance.org</p>
+
+<p>
+Questions about programs, partnerships, or volunteering? Reach out and connect with the HLEA team.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Healthy Living Education Alliance</p>
+<p>Advancing health through education, outreach, and community programs.</p>
+
+<p>© 2026 HLEA</p>
+
+</footer>
+
+</body>
+</html>
