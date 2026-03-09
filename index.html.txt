@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Living Education Alliance</title>
+  <style>
+    :root{
+      --blue:#1f6fb2;
+      --green:#2ca56d;
+      --orange:#f39c2b;
+      --yellow:#f4c542;
+      --dark:#1c2b36;
+      --light:#f5f9fc;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:var(--light);
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:0 20px;
+    }
+
+    header{
+      background:var(--white);
+      border-bottom:1px solid #ddd;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      padding:16px 0;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:1.1rem;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+      font-weight:600;
+    }
+
+    .lang-toggle{
+      border:none;
+      background:var(--yellow);
+      color:var(--dark);
+      padding:10px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:700;
+    }
+
+    .hero{
+      background:linear-gradient(120deg,var(--blue),var(--green));
+      color:white;
+      padding:80px 0;
+    }
+
+    .hero h1{
+      font-size:clamp(2rem,5vw,3rem);
+      margin:0 0 20px 0;
+      line-height:1.15;
+    }
+
+    .hero p{
+      max-width:760px;
+      font-size:1.08rem;
+      margin:0 0 16px 0;
+    }
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .button{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .primary{
+      background:var(--orange);
+      color:white;
+    }
+
+    .secondary{
+      background:white;
+      color:var(--blue);
+    }
+
+    .section{
+      padding:70px 0;
+    }
+
+    .section h2{
+      margin-top:0;
+      font-size:2rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+      margin-top:28px;
+    }
+
+    .card{
+      background:white;
+      padding:24px;
+      border-radius:12px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .card h3{
+      margin-top:0;
+    }
+
+    .blue{border-top:6px solid var(--blue)}
+    .orange{border-top:6px solid var(--orange)}
+    .green{border-top:6px solid var(--green)}
+    .yellow{border-top:6px solid var(--yellow)}
+
+    footer{
+      background:var(--dark);
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    .muted{
+      color:#4b5d6b;
+    }
+
+    @media (max-width:700px){
+      .nav-links{
+        gap:12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand" data-en="HLEA" data-es="HLEA">HLEA</div>
+
+        <div class="nav-links">
+          <a href="#mission" data-en="Mission" data-es="Misión">Mission</a>
+          <a href="#programs" data-en="Programs" data-es="Programas">Programs</a>
+          <a href="#values" data-en="Values" data-es="Valores">Values</a>
+          <a href="#team" data-en="Team" data-es="Equipo">Team</a>
+          <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+          <button id="langBtn" class="lang-toggle" type="button">Español</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1
+        data-en="Empowering Patients. Training Professionals. Optimizing Life."
+        data-es="Empoderando pacientes. Capacitando profesionales. Optimizando la vida.">
+        Empowering Patients. Training Professionals. Optimizing Life.
+      </h1>
+
+      <p
+        data-en="Welcome to the Healthy Living Education Alliance (HLEA). At HLEA, we believe that managing obesity and metabolic health requires more than just advice—it requires a movement."
+        data-es="Bienvenido a la Healthy Living Education Alliance (HLEA). En HLEA, creemos que manejar la obesidad y la salud metabólica requiere más que solo consejos: requiere un movimiento.">
+        Welcome to the Healthy Living Education Alliance (HLEA). At HLEA, we believe that managing obesity and metabolic health requires more than just advice—it requires a movement.
+      </p>
+
+      <p
+        data-en="We are a nonprofit dedicated to bridging the gap between clinical science and everyday life. Whether you are a patient looking for sustainable health tools or a healthcare provider seeking advanced training in cardiovascular prevention and longevity, you’ve found your alliance."
+        data-es="Somos una organización sin fines de lucro dedicada a cerrar la brecha entre la ciencia clínica y la vida diaria. Ya sea que usted sea un paciente en busca de herramientas sostenibles para su salud o un profesional de la salud que busca capacitación avanzada en prevención cardiovascular y longevidad, ha encontrado su alianza.">
+        We are a nonprofit dedicated to bridging the gap between clinical science and everyday life. Whether you are a patient looking for sustainable health tools or a healthcare provider seeking advanced training in cardiovascular prevention and longevity, you’ve found your alliance.
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="#programs"
+           data-en="Explore Our Programs"
+           data-es="Explorar nuestros programas">Explore Our Programs</a>
+
+        <a class="button secondary" href="#providers"
+           data-en="For Healthcare Providers"
+           data-es="Para profesionales de la salud">For Healthcare Providers</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="mission">
+    <div class="container">
+      <h2 data-en="Our Purpose" data-es="Nuestro propósito">Our Purpose</h2>
+
+      <p
+        data-en="The Healthy Living Education Alliance (HLEA) was founded to address the global challenge of metabolic disease. We recognize that obesity is a complex condition that requires a dual-pronged approach: patient-centered education and specialized professional development."
+        data-es="La Healthy Living Education Alliance (HLEA) fue fundada para abordar el desafío global de la enfermedad metabólica. Reconocemos que la obesidad es una condición compleja que requiere un enfoque dual: educación centrada en el paciente y desarrollo profesional especializado.">
+        The Healthy Living Education Alliance (HLEA) was founded to address the global challenge of metabolic disease. We recognize that obesity is a complex condition that requires a dual-pronged approach: patient-centered education and specialized professional development.
+      </p>
+
+      <p
+        data-en="Our mission is to translate clinical science into practical tools that empower patients, strengthen healthcare providers, and improve the health of underserved communities."
+        data-es="Nuestra misión es traducir la ciencia clínica en herramientas prácticas que empoderen a los pacientes, fortalezcan a los profesionales de la salud y mejoren la salud de las comunidades desatendidas.">
+        Our mission is to translate clinical science into practical tools that empower patients, strengthen healthcare providers, and improve the health of underserved communities.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="background:#eef5fa;">
+    <div class="container">
+      <h2 data-en="Our Strategic Pillars" data-es="Nuestros pilares estratégicos">Our Strategic Pillars</h2>
+
+      <div class="grid">
+        <div class="card blue">
+          <h3 data-en="For Patients" data-es="Para pacientes">For Patients</h3>
+          <p
+            data-en="We provide evidence-based education that removes stigma and replaces it with practical knowledge about nutrition, metabolic health, and sustainable lifestyle change."
+            data-es="Ofrecemos educación basada en evidencia que elimina el estigma y lo reemplaza con conocimientos prácticos sobre nutrición, salud metabólica y cambios sostenibles en el estilo de vida.">
+            We provide evidence-based education that removes stigma and replaces it with practical knowledge about nutrition, metabolic health, and sustainable lifestyle change.
+          </p>
+        </div>
+
+        <div class="card green" id="providers">
+          <h3 data-en="For Professionals" data-es="Para profesionales">For Professionals</h3>
+          <p
+            data-en="We offer rigorous training programs for healthcare providers focused on obesity management, cardiovascular prevention, and the emerging science of longevity."
+            data-es="Ofrecemos programas rigurosos de capacitación para profesionales de la salud enfocados en el manejo de la obesidad, la prevención cardiovascular y la ciencia emergente de la longevidad.">
+            We offer rigorous training programs for healthcare providers focused on obesity management, cardiovascular prevention, and the emerging science of longevity.
+          </p>
+        </div>
+
+        <div class="card orange">
+          <h3 data-en="For the Future" data-es="Para el futuro">For the Future</h3>
+          <p
+            data-en="By fostering collaboration, we help ensure that education leads to prevention, higher quality of care, and longer, healthier lives for all."
+            data-es="Al fomentar la colaboración, ayudamos a garantizar que la educación conduzca a la prevención, a una atención de mayor calidad y a vidas más largas y saludables para todos.">
+            By fostering collaboration, we help ensure that education leads to prevention, higher quality of care, and longer, healthier lives for all.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="values">
+    <div class="container">
+      <h2 data-en="HLEA Core Values" data-es="Valores fundamentales de HLEA">HLEA Core Values</h2>
+
+      <div class="grid">
+        <div class="card blue">
+          <h3 data-en="Evidence-Based Integrity" data-es="Integridad basada en evidencia">Evidence-Based Integrity</h3>
+          <p
+            data-en="We believe health education must be rooted in rigorous science. Whether training a specialist or teaching a patient, our resources are backed by the latest clinical research."
+            data-es="Creemos que la educación en salud debe estar basada en una ciencia rigurosa. Ya sea formando a un especialista o enseñando a un paciente, nuestros recursos están respaldados por la investigación clínica más reciente.">
+            We believe health education must be rooted in rigorous science. Whether training a specialist or teaching a patient, our resources are backed by the latest clinical research.
+          </p>
+        </div>
+
+        <div class="card orange">
+          <h3 data-en="Radical Compassion" data-es="Compasión radical">Radical Compassion</h3>
+          <p
+            data-en="Obesity is a complex medical condition, not a character flaw. We replace stigma and bias with empathy, respect, and support."
+            data-es="La obesidad es una condición médica compleja, no una falla de carácter. Reemplazamos el estigma y los prejuicios con empatía, respeto y apoyo.">
+            Obesity is a complex medical condition, not a character flaw. We replace stigma and bias with empathy, respect, and support.
+          </p>
+        </div>
+
+        <div class="card yellow">
+          <h3 data-en="Community-Centered Equity" data-es="Equidad centrada en la comunidad">Community-Centered Equity</h3>
+          <p
+            data-en="We are committed to serving underserved communities, especially Hispanic and Spanish-speaking populations, through culturally relevant and bilingual education."
+            data-es="Estamos comprometidos a servir a las comunidades desatendidas, especialmente a las poblaciones hispanas y de habla hispana, mediante educación bilingüe y culturalmente relevante.">
+            We are committed to serving underserved communities, especially Hispanic and Spanish-speaking populations, through culturally relevant and bilingual education.
+          </p>
+        </div>
+
+        <div class="card green">
+          <h3 data-en="Collaborative Growth" data-es="Crecimiento colaborativo">Collaborative Growth</h3>
+          <p
+            data-en="True health is an alliance. We bridge the gap between providers and patients so shared knowledge leads to better outcomes."
+            data-es="La verdadera salud es una alianza. Cerramos la brecha entre profesionales y pacientes para que el conocimiento compartido conduzca a mejores resultados.">
+            True health is an alliance. We bridge the gap between providers and patients so shared knowledge leads to better outcomes.
+          </p>
+        </div>
+
+        <div class="card green">
+          <h3 data-en="Proactive Longevity" data-es="Longevidad proactiva">Proactive Longevity</h3>
+          <p
+            data-en="We do not just treat symptoms. We focus on long-term health-span by helping people prevent chronic disease and maintain vitality."
+            data-es="No solo tratamos síntomas. Nos enfocamos en una vida saludable a largo plazo ayudando a las personas a prevenir enfermedades crónicas y mantener su vitalidad.">
+            We do not just treat symptoms. We focus on long-term health-span by helping people prevent chronic disease and maintain vitality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="programs" style="background:#fff;">
+    <div class="container">
+      <h2 data-en="Our Programs" data-es="Nuestros programas">Our Programs</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3 data-en="Community Health Workshops" data-es="Talleres comunitarios de salud">Community Health Workshops</h3>
+          <p
+            data-en="Education on nutrition, exercise, stress management, and metabolic health."
+            data-es="Educación sobre nutrición, ejercicio, manejo del estrés y salud metabólica.">
+            Education on nutrition, exercise, stress management, and metabolic health.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Chronic Disease Education" data-es="Educación sobre enfermedades crónicas">Chronic Disease Education</h3>
+          <p
+            data-en="Programs supporting individuals managing diabetes, obesity, and cardiovascular disease."
+            data-es="Programas para apoyar a personas que manejan diabetes, obesidad y enfermedades cardiovasculares.">
+            Programs supporting individuals managing diabetes, obesity, and cardiovascular disease.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Youth Wellness" data-es="Bienestar juvenil">Youth Wellness</h3>
+          <p
+            data-en="Early lifestyle education to support healthier futures for young people."
+            data-es="Educación temprana sobre estilos de vida para apoyar futuros más saludables para los jóvenes.">
+            Early lifestyle education to support healthier futures for young people.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Senior Health" data-es="Salud para adultos mayores">Senior Health</h3>
+          <p
+            data-en="Programs focused on healthy aging, independence, and quality of life."
+            data-es="Programas enfocados en envejecimiento saludable, independencia y calidad de vida.">
+            Programs focused on healthy aging, independence, and quality of life.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Workplace Wellness" data-es="Bienestar laboral">Workplace Wellness</h3>
+          <p
+            data-en="Helping organizations improve employee well-being and long-term health outcomes."
+            data-es="Ayudando a las organizaciones a mejorar el bienestar de los empleados y los resultados de salud a largo plazo.">
+            Helping organizations improve employee well-being and long-term health outcomes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Community Outreach" data-es="Alcance comunitario">Community Outreach</h3>
+          <p
+            data-en="Health fairs, screenings, bilingual resources, and public education events."
+            data-es="Ferias de salud, evaluaciones, recursos bilingües y eventos de educación pública.">
+            Health fairs, screenings, bilingual resources, and public education events.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container">
+      <h2 data-en="Our Leadership" data-es="Nuestro liderazgo">Our Leadership</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Dr. Al William Robaina</h3>
+          <p data-en="Founder, President, and Head MD" data-es="Fundador, presidente y médico principal">
+            Founder, President, and Head MD
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Chris Robaina</h3>
+          <p data-en="VP and Head of Non-Clinical Staff" data-es="Vicepresidente y jefe del personal no clínico">
+            VP and Head of Non-Clinical Staff
+          </p>
+          <p data-en="NBHWC Accredited Health Coach" data-es="Coach de salud acreditado por NBHWC">
+            NBHWC Accredited Health Coach
+          </p>
+          <p data-en="National Diabetes Prevention Program Certified" data-es="Certificado en el Programa Nacional de Prevención de la Diabetes">
+            National Diabetes Prevention Program Certified
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sophia Idriss</h3>
+          <p data-en="Head of Community Outreach and Social Media" data-es="Directora de alcance comunitario y redes sociales">
+            Head of Community Outreach and Social Media
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="background:#eef5fa;">
+    <div class="container">
+      <h2 data-en="Contact Us" data-es="Contáctenos">Contact Us</h2>
+
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@healthylivingalliance.org">contact@healthylivingalliance.org</a>
+      </p>
+
+      <p
+        class="muted"
+        data-en="Questions about programs, partnerships, volunteering, or professional training? Reach out to the HLEA team."
+        data-es="¿Preguntas sobre programas, alianzas, voluntariado o capacitación profesional? Comuníquese con el equipo de HLEA.">
+        Questions about programs, partnerships, volunteering, or professional training? Reach out to the HLEA team.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p data-en="Healthy Living Education Alliance" data-es="Healthy Living Education Alliance">
+      Healthy Living Education Alliance
+    </p>
+    <p
+      data-en="Advancing health through education, outreach, and community programs."
+      data-es="Impulsando la salud a través de la educación, el alcance comunitario y los programas comunitarios.">
+      Advancing health through education, outreach, and community programs.
+    </p>
+    <p>© 2026 HLEA</p>
+  </footer>
+
+  <script>
+    let currentLang = "en";
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      const elements = document.querySelectorAll("[data-en][data-es]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
+
+      const btn = document.getElementById("langBtn");
+      btn.textContent = lang === "en" ? "Español" : "English";
+
+      localStorage.setItem("hlea-language", lang);
+    }
+
+    document.getElementById("langBtn").addEventListener("click", function () {
+      setLanguage(currentLang === "en" ? "es" : "en");
+    });
+
+    const savedLang = localStorage.getItem("hlea-language");
+    if (savedLang === "es") {
+      setLanguage("es");
+    } else {
+      setLanguage("en");
+    }
+  </script>
+</body>
+</html>
