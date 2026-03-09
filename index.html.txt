@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Living Education Alliance</title>
+
+<style>
+
+:root{
+--blue:#1f6fb2;
+--green:#2ca56d;
+--orange:#f39c2b;
+--yellow:#f4c542;
+--dark:#1c2b36;
+--light:#f5f9fc;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:var(--light);
+color:var(--dark);
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
+header{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:var(--dark);
+font-weight:600;
+}
+
+button.lang{
+background:var(--yellow);
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(120deg,var(--blue),var(--green));
+color:white;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+font-size:18px;
+}
+
+.button{
+display:inline-block;
+padding:12px 22px;
+margin:15px 10px 0 0;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.primary{
+background:var(--orange);
+color:white;
+}
+
+.secondary{
+background:white;
+color:var(--blue);
+}
+
+.section{
+padding:70px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.blue{border-top:6px solid var(--blue)}
+.orange{border-top:6px solid var(--orange)}
+.green{border-top:6px solid var(--green)}
+.yellow{border-top:6px solid var(--yellow)}
+
+footer{
+background:var(--dark);
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<nav>
+
+<strong>HLEA</strong>
+
+<div>
+<a href="#mission" data-en="Mission" data-es="Misión">Mission</a>
+<a href="#programs" data-en="Programs" data-es="Programas">Programs</a>
+<a href="#values" data-en="Values" data-es="Valores">Values</a>
+<a href="#team" data-en="Team" data-es="Equipo">Team</a>
+<a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+
+<button class="lang" id="langBtn">Español</button>
+
+</div>
+
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h1
+data-en="Empowering Patients. Training Professionals. Optimizing Life."
+data-es="Empoderando pacientes. Capacitando profesionales. Optimizando la vida.">
+
+Empowering Patients. Training Professionals. Optimizing Life.
+
+</h1>
+
+<p
+data-en="Welcome to the Healthy Living Education Alliance (HLEA). At HLEA we believe managing obesity and metabolic health requires more than advice—it requires a movement."
+data-es="Bienvenido a la Healthy Living Education Alliance (HLEA). En HLEA creemos que manejar la obesidad y la salud metabólica requiere más que consejos: requiere un movimiento.">
+
+Welcome to the Healthy Living Education Alliance (HLEA). At HLEA we believe managing obesity and metabolic health requires more than advice—it requires a movement.
+
+</p>
+
+<p
+data-en="We are a nonprofit dedicated to bridging the gap between clinical science and everyday life. Whether you are a patient looking for sustainable health tools or a healthcare provider seeking advanced training in cardiovascular prevention and longevity, you’ve found your alliance."
+data-es="Somos una organización sin fines de lucro dedicada a cerrar la brecha entre la ciencia clínica y la vida diaria. Ya sea que usted sea un paciente en busca de herramientas sostenibles para su salud o un profesional de la salud que busca capacitación avanzada en prevención cardiovascular y longevidad, ha encontrado su alianza.">
+
+We are a nonprofit dedicated to bridging the gap between clinical science and everyday life.
+
+</p>
+
+<a class="button primary" href="#programs"
+data-en="Explore Our Programs"
+data-es="Explorar nuestros programas">
+
+Explore Our Programs
+
+</a>
+
+<a class="button secondary" href="#providers"
+data-en="For Healthcare Providers"
+data-es="Para profesionales de la salud">
+
+For Healthcare Providers
+
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="mission">
+
+<div class="container">
+
+<h2 data-en="Our Purpose" data-es="Nuestro propósito">Our Purpose</h2>
+
+<p
+data-en="The Healthy Living Education Alliance was founded to address the global challenge of metabolic disease."
+data-es="La Healthy Living Education Alliance fue fundada para abordar el desafío global de la enfermedad metabólica.">
+
+The Healthy Living Education Alliance was founded to address the global challenge of metabolic disease.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section" id="values">
+
+<div class="container">
+
+<h2 data-en="HLEA Core Values" data-es="Valores de HLEA">HLEA Core Values</h2>
+
+<div class="grid">
+
+<div class="card blue">
+<h3>Evidence-Based Integrity</h3>
+<p>Health education rooted in rigorous science.</p>
+</div>
+
+<div class="card orange">
+<h3>Radical Compassion</h3>
+<p>Removing stigma around obesity and metabolic disease.</p>
+</div>
+
+<div class="card green">
+<h3>Proactive Longevity</h3>
+<p>Helping people prevent chronic disease.</p>
+</div>
+
+<div class="card yellow">
+<h3>Educational Accessibility</h3>
+<p>Making medical knowledge understandable.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="programs">
+
+<div class="container">
+
+<h2 data-en="Programs" data-es="Programas">Programs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Community Health Workshops</h3>
+</div>
+
+<div class="card">
+<h3>Chronic Disease Education</h3>
+</div>
+
+<div class="card">
+<h3>Youth Wellness</h3>
+</div>
+
+<div class="card">
+<h3>Senior Health</h3>
+</div>
+
+<div class="card">
+<h3>Workplace Wellness</h3>
+</div>
+
+<div class="card">
+<h3>Community Outreach</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="team">
+
+<div class="container">
+
+<h2 data-en="Leadership" data-es="Liderazgo">Leadership</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Dr. Al William Robaina</h3>
+<p>Founder, President, Head MD</p>
+</div>
+
+<div class="card">
+<h3>Chris Robaina</h3>
+<p>VP and Head of Non-Clinical Staff</p>
+<p>NBHWC Accredited Health Coach</p>
+<p>National Diabetes Prevention Program Certified</p>
+</div>
+
+<div class="card">
+<h3>Sophia Idriss</h3>
+<p>Head of Community Outreach and Social Media</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<h2 data-en="Contact Us" data-es="Contáctenos">Contact Us</h2>
+
+<p>Email: contact@healthylivinged.org</p>
+
+<p
+data-en="Questions about programs or partnerships? Reach out to the HLEA team."
+data-es="¿Preguntas sobre programas o asociaciones? Comuníquese con el equipo de HLEA.">
+
+Questions about programs or partnerships? Reach out to the HLEA team.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Healthy Living Education Alliance</p>
+<p>contact@healthylivinged.org</p>
+<p>© 2026 Healthy Living Education Alliance</p>
+
+</footer>
+
+<script>
+
+let currentLang="en";
+
+function setLanguage(lang){
+
+currentLang=lang;
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+el.textContent=el.getAttribute("data-"+lang);
+});
+
+document.getElementById("langBtn").textContent = lang==="en" ? "Español" : "English";
+
+localStorage.setItem("hleaLang",lang);
+
+}
+
+document.getElementById("langBtn").onclick=function(){
+setLanguage(currentLang==="en"?"es":"en");
+};
+
+let savedLang=localStorage.getItem("hleaLang");
+
+if(savedLang){setLanguage(savedLang);}
+
+</script>
+
+</body>
+</html>
