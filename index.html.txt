@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Living Education Alliance</title>
+  <meta name="description" content="Healthy Living Education Alliance is a nonprofit advancing health through education, outreach, and community programs." />
+  <style>
+    :root{
+      --blue:#1f6fb2;
+      --green:#1f9d6a;
+      --orange:#f28c28;
+      --yellow:#f4c542;
+      --ink:#183046;
+      --muted:#5c6b78;
+      --bg:#f8fbfd;
+      --white:#ffffff;
+      --card:#ffffff;
+      --shadow:0 10px 30px rgba(18,48,70,.08);
+      --radius:18px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 32px));margin:auto}
+
+    .topbar{
+      background:linear-gradient(90deg,var(--blue),var(--green));
+      color:#fff;
+      font-size:.95rem;
+      padding:10px 0;
+    }
+    .topbar .container{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(24,48,70,.08);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:74px;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      color:var(--ink);
+    }
+
+    .brand-mark{
+      width:42px;height:42px;border-radius:12px;
+      background:conic-gradient(from 220deg, var(--blue), var(--green), var(--yellow), var(--orange), var(--blue));
+      box-shadow:var(--shadow);
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .menu a{
+      font-weight:600;
+      color:var(--ink);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 20px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,var(--orange),var(--yellow));
+      color:#173042;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      background:linear-gradient(90deg,var(--blue),var(--green));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-outline{
+      border:2px solid var(--blue);
+      color:var(--blue);
+      background:#fff;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .hero{
+      padding:78px 0 48px;
+      background:
+        radial-gradient(circle at top left, rgba(31,111,178,.14), transparent 35%),
+        radial-gradient(circle at top right, rgba(31,157,106,.16), transparent 32%),
+        linear-gradient(180deg, #fff, #f7fbfc);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:rgba(31,157,106,.12);
+      color:var(--green);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    h1,h2,h3{line-height:1.15;margin:0 0 14px}
+    h1{font-size:clamp(2.2rem,4.6vw,4.1rem)}
+    h2{font-size:clamp(1.8rem,3vw,2.7rem)}
+    h3{font-size:1.2rem}
+    p{margin:0 0 14px;color:var(--muted)}
+
+    .hero-card{
+      background:var(--white);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      border:1px solid rgba(24,48,70,.08);
+    }
+
+    .hero-visual{
+      min-height:460px;
+      position:relative;
+      background:
+        linear-gradient(135deg, rgba(31,111,178,.9), rgba(31,157,106,.85)),
+        linear-gradient(180deg, var(--blue), var(--green));
+      color:#fff;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+
+    .hero-badges{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .badge{
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.2);
+      padding:14px;
+      border-radius:16px;
+      backdrop-filter:blur(4px);
+      font-weight:700;
+    }
+
+    .section{
+      padding:72px 0;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    .grid-4,.grid-3,.grid-2{
+      display:grid;
+      gap:22px;
+    }
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(24,48,70,.07);
+      height:100%;
+    }
+
+    .icon{
+      width:52px;height:52px;border-radius:14px;
+      display:grid;place-items:center;
+      font-size:1.4rem;font-weight:700;
+      margin-bottom:16px;
+      color:#fff;
+    }
+    .blue{background:var(--blue)}
+    .green{background:var(--green)}
+    .orange{background:var(--orange)}
+    .yellow{background:var(--yellow); color:#173042}
+
+    .program-card{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:260px;
+    }
+
+    .program-card a{
+      margin-top:10px;
+      font-weight:700;
+      color:var(--blue);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .feature-panel{
+      background:linear-gradient(135deg, #fff, #f4fbf7);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(24,48,70,.07);
+      padding:30px;
+    }
+
+    .team-card{
+      text-align:left;
+    }
+
+    .avatar{
+      width:68px;height:68px;border-radius:50%;
+      display:grid;place-items:center;
+      font-size:1.35rem;font-weight:800;
+      color:#fff;margin-bottom:16px;
+    }
+
+    .tag-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:14px;
+    }
+
+    .tag{
+      padding:8px 12px;
+      background:#eef7fb;
+      color:var(--blue);
+      border-radius:999px;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .cta{
+      background:linear-gradient(135deg, rgba(31,111,178,.96), rgba(31,157,106,.92));
+      color:#fff;
+      border-radius:28px;
+      padding:36px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta p{color:rgba(255,255,255,.9)}
+
+    form{
+      display:grid;
+      gap:14px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+    }
+
+    label{
+      font-weight:700;
+      color:var(--ink);
+    }
+
+    input, textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:14px;
+      border:1px solid rgba(24,48,70,.15);
+      font:inherit;
+      background:#fff;
+    }
+
+    textarea{min-height:150px;resize:vertical}
+
+    .small{
+      font-size:.93rem;
+      color:var(--muted);
+    }
+
+    footer{
+      background:#123146;
+      color:#d9e7ef;
+      padding:42px 0 24px;
+      margin-top:40px;
+    }
+
+    footer p, footer a{color:#d9e7ef}
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:24px;
+      margin-bottom:22px;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.12);
+      padding-top:18px;
+      font-size:.95rem;
+    }
+
+    .mobile-toggle{
+      display:none;
+      background:none;border:none;font-size:1.4rem;font-weight:700;color:var(--ink);
+    }
+
+    .highlight{
+      color:var(--blue);
+    }
+
+    .note{
+      background:#fff7df;
+      border-left:5px solid var(--yellow);
+      padding:16px 18px;
+      border-radius:14px;
+      color:#6b5a16;
+      margin-top:16px;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,.split,.grid-4,.grid-3,.grid-2,.footer-grid{
+        grid-template-columns:1fr;
+      }
+      .menu{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:0 0 18px;
+      }
+      .menu.open{display:flex}
+      .mobile-toggle{display:block}
+      nav{align-items:center;flex-wrap:wrap}
+      .hero{padding-top:46px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>Advancing health through education, outreach, and community programs.</div>
+      <div>Contact: <a href="mailto:contact@healthylivingalliance.org">contact@healthylivingalliance.org</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home">
+          <span class="brand-mark"></span>
+          <span>Healthy Living Education Alliance</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Open Menu" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+          <a href="#mission">Mission</a>
+          <a href="#programs">Programs</a>
+          <a href="#team">Our Team</a>
+          <a href="#involved">Get Involved</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary" href="#donate">Donate</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Nonprofit Health Education Organization</span>
+          <h1>Supporting <span class="highlight">healthier communities</span> through education and outreach.</h1>
+          <p>
+            Healthy Living Education Alliance is dedicated to making quality health education
+            accessible to individuals, families, and communities through workshops, prevention-focused programs,
+            and practical resources that help people make informed health decisions.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
+            <a class="btn btn-secondary" href="#programs">Explore Our Programs</a>
+            <a class="btn btn-outline" href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-visual">
+            <h3 style="font-size:1.8rem; color:#fff;">Our Mission</h3>
+            <p style="color:rgba(255,255,255,.92);">
+              We believe access to clear, trustworthy health education is a fundamental right.
+              Our work helps communities build knowledge, confidence, and support for lifelong wellness.
+            </p>
+            <div class="hero-badges">
+              <div class="badge">Health Education</div>
+              <div class="badge">Prevention Focus</div>
+              <div class="badge">Community Support</div>
+              <div class="badge">Accessible Resources</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mission">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Our Mission</h2>
+            <p>Empowering people with knowledge, support, and practical tools for healthy living.</p>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="icon blue">+</div>
+            <h3>Health Education</h3>
+            <p>Empowering people with knowledge about nutrition, movement, prevention, stress management, and overall wellness.</p>
+          </div>
+          <div class="card">
+            <div class="icon green">✓</div>
+            <h3>Prevention Focus</h3>
+            <p>Helping prevent chronic disease through evidence-informed education and healthy lifestyle support.</p>
+          </div>
+          <div class="card">
+            <div class="icon orange">♥</div>
+            <h3>Community Support</h3>
+            <p>Building healthier, stronger communities through collaboration, outreach, and inclusive programming.</p>
+          </div>
+          <div class="card">
+            <div class="icon yellow">i</div>
+            <h3>Accessible Resources</h3>
+            <p>Making health information easier to understand and more available to the people who need it most.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs" style="background:#eef7fb;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Our Programs</h2>
+            <p>We offer a range of community-centered programs designed to meet diverse health education needs.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card program-card">
+            <div>
+              <h3>Community Health Workshops</h3>
+              <p>Interactive workshops covering nutrition, exercise, stress management, and chronic disease prevention in welcoming community settings.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+
+          <div class="card program-card">
+            <div>
+              <h3>Chronic Disease Education</h3>
+              <p>Programs for individuals living with diabetes, heart disease, hypertension, and related conditions, with a focus on self-management and quality of life.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+
+          <div class="card program-card">
+            <div>
+              <h3>Youth Wellness Initiatives</h3>
+              <p>Programs that help young people build healthy habits early through physical activity, nutrition education, and mental wellness awareness.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+
+          <div class="card program-card">
+            <div>
+              <h3>Senior Health & Wellness</h3>
+              <p>Specialized education for older adults focused on independence, fall prevention, cognitive wellness, and social engagement.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+
+          <div class="card program-card">
+            <div>
+              <h3>Workplace Wellness</h3>
+              <p>Employer and workforce education programs that help organizations build a culture of wellness and support healthier teams.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+
+          <div class="card program-card">
+            <div>
+              <h3>Community Outreach Events</h3>
+              <p>Free public health fairs, screenings, and educational events that bring resources directly to neighborhoods and community centers.</p>
+            </div>
+            <a href="#contact">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="feature-panel">
+          <h2>Why our work matters</h2>
+          <p>
+            Health education has the greatest impact when it is practical, culturally aware,
+            community-based, and easy to access. We design programs that meet people where they are
+            and help them take achievable steps toward healthier living.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Prevention</span>
+            <span class="tag">Education</span>
+            <span class="tag">Community Outreach</span>
+            <span class="tag">Behavior Change</span>
+          </div>
+        </div>
+
+        <div class="feature-panel">
+          <h2>Recognition & credibility</h2>
+          <p>
+            We are committed to delivering trusted education and coaching support grounded in recognized standards,
+            prevention principles, and community health best practices.
+          </p>
+          <div class="note">
+            Public credential language should match your real credentials exactly. If Chris holds the board-certified
+            credential, use “NBC-HWC.” If your diabetes prevention program is recognized through the CDC’s National DPP /
+            DPRP process, name that recognition exactly as granted.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team" style="background:#fff;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Our Team</h2>
+            <p>Meet the professionals leading the Healthy Living Education Alliance mission.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card team-card">
+            <div class="avatar blue">AR</div>
+            <h3>Dr. Al William Robaina</h3>
+            <p><strong>Founder, President, and Head MD</strong></p>
+            <p>
+              Dr. Robaina brings decades of medical expertise and a deep commitment to health education.
+              His leadership helps guide the organization’s mission to make quality health information and support accessible to all.
+            </p>
+          </div>
+
+          <div class="card team-card">
+            <div class="avatar green">CR</div>
+            <h3>Chris Robaina</h3>
+            <p><strong>VP and Head of Non-Clinical Staff</strong></p>
+            <p>
+              Chris oversees program operations, team leadership, and participant support. His work focuses on behavior change,
+              wellness coaching, and helping community members build sustainable healthy habits.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Health Coaching</span>
+              <span class="tag">NBHWC / NBC-HWC*</span>
+              <span class="tag">National DPP*</span>
+            </div>
+            <p class="small" style="margin-top:12px;">
+              *Replace these labels with the exact credential and recognition wording you have confirmed.
+            </p>
+          </div>
+
+          <div class="card team-card">
+            <div class="avatar orange">SI</div>
+            <h3>Sophia Idriss</h3>
+            <p><strong>Head of Community Outreach and Social Media</strong></p>
+            <p>
+              Sophia leads community engagement and digital outreach, helping expand partnerships,
+              strengthen neighborhood connections, and amplify the organization’s health education message.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="involved" style="background:#eefaf4;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Get Involved</h2>
+            <p>There are many ways to support our mission and help build healthier communities.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon orange">$</div>
+            <h3 id="donate">Make a Donation</h3>
+            <p>Your donation directly supports educational programs, outreach efforts, and access to reliable health resources.</p>
+            <p style="margin-top:16px;"><a class="btn btn-primary" href="#contact">Donate Now</a></p>
+          </div>
+
+          <div class="card">
+            <div class="icon green">↗</div>
+            <h3>Volunteer</h3>
+            <p>Join our volunteer community and help support workshops, events, outreach, and mission-driven programming.</p>
+            <p style="margin-top:16px;"><a class="btn btn-secondary" href="#contact">Express Interest</a></p>
+          </div>
+
+          <div class="card">
+            <div class="icon blue">◎</div>
+            <h3>Partner With Us</h3>
+            <p>Organizations interested in collaboration, sponsorship, or community initiatives are welcome to reach out.</p>
+            <p style="margin-top:16px;"><a class="btn btn-outline" href="#contact">Start a Conversation</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container split">
+        <div>
+          <h2>Contact Us</h2>
+          <p>Reach out with questions about our mission, workshops, outreach, partnerships, or volunteer opportunities.</p>
+          <div class="card" style="margin-top:18px;">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> <a href="mailto:contact@healthylivingalliance.org">contact@healthylivingalliance.org</a></p>
+            <p><strong>Organization:</strong> Healthy Living Education Alliance</p>
+            <p><strong>Focus:</strong> Advancing health through education, outreach, and community programs.</p>
+            <p class="small" style="margin-top:16px;">
+              For a fully working contact form on a free static site, connect this form to a service such as Formspree, Basin, or Netlify Forms.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject *</label>
+              <input id="subject" name="subject" type="text" placeholder="How can we help?" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us more..." required></textarea>
+            </div>
+
+            <button class="btn btn-secondary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2 style="color:#fff;">Healthy communities start with accessible education.</h2>
+          <p>
+            Help us expand workshops, strengthen outreach, and equip more individuals and families
+            with the tools they need to make informed health decisions.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
+            <a class="btn btn-primary" href="#donate">Support Our Mission</a>
+            <a class="btn btn-outline" href="#programs" style="background:#fff;">View Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color:#fff;">Healthy Living Education Alliance</h3>
+          <p>Advancing health through education, outreach, and community programs.</p>
+        </div>
+
+        <div>
+          <h3 style="color:#fff;">Quick Links</h3>
+          <p><a href="#home">Home</a></p>
+          <p><a href="#mission">Mission</a></p>
+          <p><a href="#programs">Programs</a></p>
+          <p><a href="#team">Our Team</a></p>
+          <p><a href="#involved">Get Involved</a></p>
+          <p><a href="#contact">Contact Us</a></p>
+        </div>
+
+        <div>
+          <h3 style="color:#fff;">Connect</h3>
+          <p><a href="mailto:contact@healthylivingalliance.org">contact@healthylivingalliance.org</a></p>
+          <p>Questions? We’d love to hear from you.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Healthy Living Education Alliance. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
